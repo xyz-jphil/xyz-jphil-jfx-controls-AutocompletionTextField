@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="1.7976931348623157E308" spacing="3.0" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@standardouterr.css" />
+    </stylesheets>
+    <children>
+        <HBox spacing="20.0">
+            <children>
+                <Button fx:id="outButton" defaultButton="true" mnemonicParsing="false" onAction="#copyOutAction" text="Copy Output Message">
+                    <!-- <tooltip>
+                        <Tooltip text="Copy the text and paste in an excel file. &#10;Remove names in the excel sheet. &#10;And then save it as excel file.&#10;Copy the column containing page urls, &#10;     and paste it in a notepad file.&#10;This text file will be fed to other bots.&#10;Remember the location of this text file." />
+                    </tooltip> -->
+                </Button>
+                <Button fx:id="errButton" mnemonicParsing="false" onAction="#copyErrAction" text="Copy Error Message">
+                    <!-- <tooltip>
+                        <Tooltip text="Copy the text and paste in an excel file. &#10;Remove names in the excel sheet. &#10;And then save it as excel file.&#10;Copy the column containing page urls, &#10;     and paste it in a notepad file.&#10;This text file will be fed to other bots.&#10;Remember the location of this text file." />
+                    </tooltip> -->
+                </Button>
+            <Button mnemonicParsing="false" onAction="#clearAction" text="Clear" />
+            </children>
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+        </HBox>
+        <TabPane fx:id="tabs" layoutX="26.0" layoutY="27.0" prefHeight="269.0" prefWidth="446.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" VBox.vgrow="ALWAYS">
+            <tabs>
+                <Tab fx:id="outTab" text="Output">
+                    <content>
+                        <TextArea fx:id="outArea" editable="false" text="1`&#10;2&#10;3&#10;4__________________________________________________________________&#10;5&#10;6&#10;6&#10;7&#10;8&#10;9&#10;&#10;91" />
+                    </content>
+                </Tab>
+                <Tab fx:id="errTab" text="Error Messages">
+                    <content>
+                        <TextArea fx:id="errArea" editable="false" text="1`&#10;2&#10;3&#10;4__________________________________________________________________&#10;5&#10;6&#10;6&#10;7&#10;8&#10;9&#10;&#10;91&#10;" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</fx:root>

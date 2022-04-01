@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.disabledClass {
+    .tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+        -fx-border-color: bisque;
+        -fx-border-width : 0.2em;
+    }
+}

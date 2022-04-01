@@ -1,0 +1,1 @@
+This is a simple autocompletion text field which gives a drop down of suggestions. It works with Scenebuilder.
